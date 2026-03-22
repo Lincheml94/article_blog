@@ -3,67 +3,133 @@
     src: url();
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    
+@font-face {
+    font-family: Abiglia;
+    src: url(/AbigliaPersonalUseOnlyRegular-rvwqB.ttf);
 }
 
-header{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+header {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    background: rgb(19, 174, 19);
-    border: 4px solid rgb(255, 60, 60);
-    margin: 0;
-    align-items: center;
+    gap: 20px;
     justify-content: center;
-    height: 11.5rem;
-    width: 12rem;
-    border-radius: 180px;
-    position: fixed;
-    margin-top: 30px;
-    opacity: 0.8;
+    align-items: center;
+    background-image: url("/images/dreamstime_xxl_145100933.jpg");
+    background-size: cover;
 
-    h1{
-        font-family: arial;
-        font-size: 1.5rem;
+    .bulle {
+
+        background: rgba(19, 174, 19, 0.8);
+        border: 6px solid rgb(255, 60, 60);
+        margin: 0;
+        height: 11.5rem;
+        width: 12rem;
+        border-radius: 180px;
+        position: sticky;
+        margin-top: 30px;
+        text-shadow: 3px 5px 1px rgb(224, 49, 49);
+
+        h1 {
+            font-family: Abiglia;
+            font-size: 2.4rem;
+        }
+    }
+
+    h2 {
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 2px 1px rgb(224, 49, 49);
+        font-size: 1.6rem;
+        font-weight: lighter;
+        font-family: Abiglia;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
     }
 }
 
-a{
-    text-decoration: none;
-    color: black;
+/* CONTENT */
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+    .main-header {
+        position: sticky;
+        top: 20px;
+
+
+        .nav-principale {
+
+            ul {
+                display: flex;
+                gap: 5px;
+                color: rgba(19, 174, 19, 0.8);
+                font-size: 0.8rem;
+            }
+
+            ul li {
+                list-style: none;
+            }
+
+            a {
+                text-decoration: none;
+
+            }
+        }
+
+        .titre-2 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 1px 0px rgb(224, 49, 49);
+            font-family: Abiglia;
+            font-size: 1.2rem;
+            color: rgba(19, 174, 19, 1);
+        }
+    }
+
+    .recettes {
+
+        .carte-recette {
+            width: 16rem;
+            height: 25rem;
+            background: red;
+            margin: 20px;
+        }
+    }
 }
-nav{
+
+
+
+footer {
+    gap: 10px;
+    height: 5vh;
+    background: rgba(19, 174, 19, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
-}
 
-nav ul{
-    padding: 0;
-}
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
 
-nav ul li {
-    list-style: none;
-    padding: 10px;
-    float: left;
-    
-}
-
-ul li a{
-    text-decoration: none;
-    color: black;
-    font-size: 0.8rem;
-}
-
-main{
-    img{
-        width: 100vw;
-        object-fit: contain;
-        object-position: bottom;
+        li {
+            text-decoration: none;
+            list-style-type: none;
+            font-size: 12px;
+        }
     }
 }
-
