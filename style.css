@@ -100,14 +100,44 @@ header {
     }
 
     .recettes {
+        display: flex;
+        flex-direction: column;
 
         .carte-recette {
-            width: 16rem;
+            width: 24rem;
             height: 25rem;
-            background: red;
+            background: rgb(255, 213, 213);
             margin: 20px;
+            height: 100%;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            margin-top: 50px;
+
+            p{
+                text-align: center;
+            }
+        }
+
+        .deroulant {
+            display: none;
         }
     }
+}
+
+.first-arrow, .second-arrow {
+    cursor: pointer;
+    margin: 10px 0; /* Espace pour aérer */
+}
+.second-arrow {
+    display: none;
+}
+.deroulant.active {
+    display: block;
 }
 
 
@@ -133,3 +163,9 @@ footer {
         }
     }
 }
+
+@media only screen and (max-width: 1100px) {
+    .recettes {
+        flex-direction: row;
+
+}}
