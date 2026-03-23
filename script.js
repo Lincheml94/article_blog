@@ -41,3 +41,19 @@ cartes.forEach(carte => {
     openArrow.addEventListener('click', toggleRecette);
     closeArrow.addEventListener('click', toggleRecette);
 });
+
+
+const nav = document.querySelector('.nav-principale');
+const buttonMenuOpen = document.querySelector('.hamburger-open');
+const buttonMenuClose = document.querySelector('.hamburger-close');
+
+buttonMenuOpen.addEventListener('click', () => {
+    nav.classList.toggle('nav-principale');
+    if (nav.classList.contains('nav-principale')) {
+        buttonMenuOpen.style.display = "none";
+        buttonMenuClose.style.display = "block";
+    } else {
+        buttonMenuOpen.style.display = "block";
+        buttonMenuClose.style.display = "none";
+    }
+});
